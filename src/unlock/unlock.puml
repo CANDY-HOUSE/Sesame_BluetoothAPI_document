@@ -1,0 +1,4 @@
+@startuml
+APP -> Sesame5: SSM2_ITEM_CODE_UNLOCK (83), 歷史標籤
+Sesame5 --> APP: Success
+@enduml

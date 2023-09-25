@@ -1,0 +1,6 @@
+@startuml
+APP -> Sesame5: SSM2_ITEM_CODE_VERSION_DETAIL(0x05)
+Sesame5 --> APP: 命令成功、版本號
+
+
+@enduml

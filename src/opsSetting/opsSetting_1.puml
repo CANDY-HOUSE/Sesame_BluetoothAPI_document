@@ -1,0 +1,5 @@
+@startuml
+APP -> Sesame5: SSM2_ITEM_OPS_TIMER_SETTING(92), ops_lock_second
+Sesame5 --> APP: Success
+Sesame5 -> APP: ops_lock_second
+@enduml

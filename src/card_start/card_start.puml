@@ -1,0 +1,3 @@
+@startuml
+SesameTouch -> APP: SSM_OS3_CARD_FIRST(112)
+@enduml

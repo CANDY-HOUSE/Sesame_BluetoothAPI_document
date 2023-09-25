@@ -1,0 +1,17 @@
+@startuml
+APP -> APP: {公鑰A, 私鑰A} = secp256r1()
+APP -> Sesame5: 發送{公鑰A, 手機 timestamp , 註冊命令}
+
+Sesame5 --> APP: (ssm5被註冊)?回覆已註冊:不回複
+
+Sesame5 -> Sesame5: 使用手機 timestamp 設定 ssm5 時間
+Sesame5 -> Sesame5: {公鑰S, 私鑰S} = secp256r1()
+Sesame5 -> Sesame5: Secret = secp256r1(公鑰A, 私鑰S), Device secret = Secret 前16bytes
+Sesame5 -> Sesame5: Token = AES_CMAC(Device secret, random code)
+Sesame5 --> APP: 回覆{註冊成功, 機械狀態, 機械設定, 公鑰S}
+
+APP -> APP: 設定 ssm5 機械狀態，機械設定
+APP -> APP: Secret = secp256r1(公鑰S, 私鑰A), Device secret = Secret 前16bytes
+APP -> APP: Token = Token = AES_CMAC(Device secret, random code)
+
+@enduml

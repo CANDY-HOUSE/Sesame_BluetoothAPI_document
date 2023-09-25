@@ -1,0 +1,25 @@
+@startuml
+|Sesame(APP)|
+start 
+:{publicKeyA, privateKeyA} = secp256r1();
+:發送{publicKeyA, 手機 timestamp , 註冊命令};
+|Sesame5|
+if(ssm5被註冊) then (否)
+  :ssm5 timestamp = 手機 timestamp;
+  :{publicKeyS, privateKeyS} = secp256r1();
+  :Secret = secp256r1(publicKeyA, privateKeyS)
+  Device secret = Secret 前16bytes;
+  :Token = AES_CMAC(Device secret, random code);
+  :回覆{註冊成功, 機械狀態, 機械設定, publicKeyS};
+  |Sesame(APP)|
+  :設定 ssm5 機械狀態，機械設定;
+  :Secret = secp256r1(publicKeyS, privateKeyA)
+  Device secret = Secret 前16bytes;
+  :Token = AES_CMAC(Device secret, random code);
+  stop
+else (是)
+  |Sesame5|
+  :回覆已註冊;
+  stop
+endif
+@enduml

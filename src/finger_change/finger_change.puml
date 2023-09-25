@@ -1,0 +1,3 @@
+@startuml
+SesameTouch -> APP: {Finger ID, Finger Name}
+@enduml

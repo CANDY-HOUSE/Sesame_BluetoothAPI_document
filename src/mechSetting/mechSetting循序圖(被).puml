@@ -1,0 +1,5 @@
+@startuml
+APP -> Sesame5: 請求 mechSetting
+Sesame5 --> APP: 請求成功
+Sesame5 -> APP: mechSetting
+@enduml

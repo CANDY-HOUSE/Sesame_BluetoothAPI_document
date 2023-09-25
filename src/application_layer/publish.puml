@@ -1,0 +1,3 @@
+@startuml
+Sesame5 -> APP: publish
+@enduml

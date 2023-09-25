@@ -1,0 +1,5 @@
+@startuml
+APP -> SesameTouch: {SSM3_ITEM_REMOVE_SESAME(103), device_name}
+SesameTouch --> APP: 命令成功
+SesameTouch -> APP: Sesame 列表
+@enduml

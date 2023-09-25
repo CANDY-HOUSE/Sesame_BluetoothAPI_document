@@ -1,0 +1,4 @@
+@startuml
+APP -> SesameTouch: {SSM_OS3_FINGERPRINT_GET(117)}
+SesameTouch --> APP: 命令成功
+@enduml

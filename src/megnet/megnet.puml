@@ -1,0 +1,5 @@
+@startuml
+APP -> Sesame5: SSM2_ITEM_CODE_MAGNET(17)
+Sesame5 --> APP: Success
+Sesame5 -> APP: mechStatus
+@enduml

@@ -1,0 +1,4 @@
+@startuml
+APP -> Sesame5: {登入命令,ccmkey A}
+Sesame5 --> APP: (ccmkey A == ccmkey S)?{登入成功, ssm5 timestamp}:{登入失敗, ssm5跟手機斷線}
+@enduml
