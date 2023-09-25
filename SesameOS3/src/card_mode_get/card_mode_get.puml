@@ -1,0 +1,4 @@
+@startuml
+APP -> SesameTouch: SSM_OS3_CARD_MODE_GET(113)
+SesameTouch --> APP: {命令成功, 卡片模式}
+@enduml

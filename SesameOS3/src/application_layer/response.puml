@@ -1,0 +1,4 @@
+@startuml
+APP -> Sesame5: request
+Sesame5 --> APP: response
+@enduml

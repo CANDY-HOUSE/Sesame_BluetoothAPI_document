@@ -1,0 +1,4 @@
+@startuml
+APP -> SesameTouch: {SSM_OS3_FINGERPRINT_DELETE(116), ID}
+SesameTouch --> APP: 命令成功
+@enduml

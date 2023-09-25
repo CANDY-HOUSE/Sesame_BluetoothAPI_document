@@ -1,0 +1,4 @@
+@startuml
+APP -> Sesame5: SSM2_ITEM_CODE_HISTORY(4)
+Sesame5 --> APP: Success, History
+@enduml

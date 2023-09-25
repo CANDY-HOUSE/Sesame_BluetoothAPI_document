@@ -1,0 +1,5 @@
+@startuml
+APP -> SesameTouch: {SSM_OS3_PASSCODE_CHANGE(123), id, name}
+SesameTouch --> APP: {命令成功}
+SesameTouch -> APP: {Password ID, Password Name}
+@enduml

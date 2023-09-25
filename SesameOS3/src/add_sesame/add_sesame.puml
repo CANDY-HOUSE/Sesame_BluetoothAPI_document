@@ -1,0 +1,5 @@
+@startuml
+APP -> SesameTouch: {SSM3_ITEM_ADD_SESAME(101), device_name, secretKey}
+SesameTouch --> APP: 命令成功
+SesameTouch -> APP: Sesame 列表
+@enduml

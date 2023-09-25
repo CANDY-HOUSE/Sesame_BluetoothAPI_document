@@ -1,0 +1,3 @@
+@startuml
+SesameTouch -> APP: Sesame 列表
+@enduml

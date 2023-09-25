@@ -1,0 +1,4 @@
+@startuml
+APP -> Sesame5: {SSM2_ITEM_CODE_TIME(0x08), timestamp}
+Sesame5 --> APP: 命令成功
+@enduml

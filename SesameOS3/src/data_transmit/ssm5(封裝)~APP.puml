@@ -1,0 +1,20 @@
+@startuml
+start 
+:輸入欲傳送資料;
+if(需要加密) then(是)
+  :欲傳送資料 = aes_ccm_encrypt_and_tag(key:ccm_key, iv:encrypt_data_count, add:0x00, input:欲傳送資料);
+
+else(否)
+  :欲傳送資料 = 欲傳送資料;
+endif
+
+:將資料包成封包;
+if(資料長度>20) then (是)
+  :設定封包頭 op_code;
+  :切割資料，每20bytes一個封包;
+else (否)
+  :設定封包頭 op_code;
+endif
+  :傳送資料;
+stop
+@enduml
