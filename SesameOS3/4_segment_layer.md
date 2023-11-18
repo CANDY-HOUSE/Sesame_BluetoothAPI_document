@@ -1,11 +1,14 @@
 # Segment layer
+
 Segment layer 要做兩件事情。
 
 1. Sesame5 與 手機通訊時，限制封包最大長度 20Bytes，送長訊息需要對資料進行拆解，傳到接收端再組合。
 2. 標記傳送的資料是否有加密
 
 ## 對照表
-Segment layer 在封包頭中的標記此封包是否被切割或加密，接收端可以按照標記做相應的處理，將封包還原成原始資料。以下為 Segment layer 標記對照表。
+
+Segment layer 在封包頭中的標記此封包是否被切割或加密，接收端可以按照標記做相應的處理，將封包還原成原始資料。以下為 Segment
+layer 標記對照表。
 
 Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及資料是否加密，bit 0 表示該封包是否為一筆資料的起始封包。
 
@@ -19,6 +22,7 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
 | b0000010  | 加密結束 | 1     | 開始  |
 
 ## 標記以 16 進位解讀
+
 0 表示該封包不是開始封包也不是結束封包
 
 1 表示該封包是開始封包不是結束封包
@@ -40,11 +44,12 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
 | 0x04 | 非開始 | 加密結束 |
 | 0x05 | 開始  | 加密結束 |
 
-
 ## 範例
+
 假設一個封包能放 4bytes 的資料，超過4bytes就需要進行分割(實際為 20bytes)。
 
 ### 短明文封包
+
 資料: A A B B
 
 <p align="left" >
@@ -63,6 +68,7 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
     5. 去除封包頭還原資料 : A A B B
 
 ### 中明文封包
+
 資料: A A A A B B B B
 
 <p align="left" >
@@ -86,6 +92,7 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
     10. 去除封包頭還原資料 : A A A A B B B B
 
 ### 長明文封包
+
 資料 : A A A A B B B B C C C C
 
 <p align="left" >
@@ -112,8 +119,8 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
     13. 資料接收完成，組合封包
     14. 去除封包頭還原資料 : A A A A B B B B C C C C
 
-
 ### 短密文封包
+
 資料 : A A B B
 
 資料加密後 : X X Y Y
@@ -135,6 +142,7 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
     6. 解密 : A A B B
 
 ### 中密文封包
+
 資料: A A A A B B B B
 
 資料加密後 : X X X X Y Y Y Y
@@ -162,6 +170,7 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
     12. 資料解密 : A A A A B B B B
 
 ### 長密文封包
+
 資料 : A A A A B B B B C C C C
 
 資料加密後 : X X X X Y Y Y Y Z Z Z Z
@@ -193,4 +202,6 @@ Segment layer 標記有 8bits，其中 bit 7 ~ 1 表示是否為結束封包及�
     16. 資料解密 : A A A A B B B B C C C C
 
 ## 注意 !!!
-資料經過 AES_CCM 加密後除了密文外還會產生 4Bytes 的 ccm_tag 用於解密，密文及 ccm_tag 需要一起傳給接收端，因此加密後的資料會增加 4Bytes，詳見 `security_layer` 說明。
+
+資料經過 AES_CCM 加密後除了密文外還會產生 4Bytes 的 ccm_tag 用於解密，密文及 ccm_tag 需要一起傳給接收端，因此加密後的資料會增加
+4Bytes，詳見 `security_layer` 說明。
