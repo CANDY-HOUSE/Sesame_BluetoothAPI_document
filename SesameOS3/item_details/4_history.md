@@ -1,18 +1,20 @@
-# Item: History 
+# Item: History
 
 手機發送歷史請求指令，Sesame5 回應 flash 裡最舊的歷史，並把該筆歷史從 flash 中刪除。
 
 <!-- Sesame5 廣播中會帶有是否有歷史標籤需要讀出的旗標，詳見 advertising 欄位說明。 -->
 
 ## 循序圖
+
 <p align="left" >
   <img src="../src/history/history.png" alt="" title="">
 </p>
 
 ## 手機送出資料
-| Byte |1      | 0         |
-|------|:-----:|:---------:|
-| Data |is peek| item code |
+
+| Byte |    1    |     0     |
+|------|:-------:|:---------:|
+| Data | is peek | item code |
 
 item code : SSM2_ITEM_CODE_HISTORY (4)
 
@@ -23,45 +25,46 @@ is peek == false : 彈出一筆最舊的歷史，並刪除歷史
 ## ssm5 回傳內容
 
 ### if (is peek == true || (is peek == true && flash裡有歷史))
-| Byte  | N ~ 3   | 2      | 1         | 0    |
-|-------|:-------:|:------:|:---------:|:----:|
-| Data  | payload | res    | item_code | type |
-| 說明    | 送給手機的資料 | 命令處裡狀態 | 指令編號      | 推送類型 |
+
+| Byte |  N ~ 3  |   2    |     1     |  0   |
+|------|:-------:|:------:|:---------:|:----:|
+| Data | payload |  res   | item_code | type |
+| 說明   | 送給手機的資料 | 命令處裡狀態 |   指令編號    | 推送類型 |
 
 type : SSM2_OP_CODE_RESPONSE (0x07)
 
-item code : SSM2_ITEM_CODE_HISTORY(4)
+item code : SSM2_ITEM_CODE_HISTORY (4)
 
 res : CMD_RESULT_SUCCESS (0x00)
 
 payload(History): 以下為 History 資料格式
 
 #### payload
-| Byte | N ~ 16    | 15 ~ 9      | 8 ~ 5     | 4    | 3 ~ 0 |
-|------|:---------:|:-----------:|:---------:|:----:|:-----:|
-| Data | param     | mech_status | ts        | type | id    |
-| 說明   | 歷史標籤、長度 | 機械狀態        | timestamp | 歷史類型 | 第幾筆歷史 |
+
+| Byte | N ~ 16  |   15 ~ 9    |   8 ~ 5   |  4   | 3 ~ 0 |
+|------|:-------:|:-----------:|:---------:|:----:|:-----:|
+| Data |  param  | mech_status |    ts     | type |  id   |
+| 說明   | 歷史標籤、長度 |    機械狀態     | timestamp | 歷史類型 | 第幾筆歷史 |
 
 #### param
 
-| Byte | 32 ~ 1 | 0           |
+| Byte | 32 ~ 1 |      0      |
 |------|:------:|:-----------:|
-| Data | data   | data_length |
-| 說明   | 歷史標籤   | 標籤長度        |
+| Data |  data  | data_length |
+| 說明   |  歷史標籤  |    標籤長度     |
 
 ### if (is peek == true && flash裡沒歷史)
 
-| Byte  | 2      | 1         | 0    |
-|-------|:------:|:---------:|:----:|
-| Data  | res    | item_code | type |
-| 說明  | 命令處裡狀態 | 指令編號      | 推送類型 |
+| Byte |   2    |     1     |  0   |
+|------|:------:|:---------:|:----:|
+| Data |  res   | item_code | type |
+| 說明   | 命令處裡狀態 |   指令編號    | 推送類型 |
 
 type : SSM2_OP_CODE_RESPONSE (0x07)
 
 item code : SSM2_ITEM_CODE_HISTORY(4)
 
 res : CMD_RESULT_NOT_FOUND (0x05)
-
 
 ```c
 #pragma pack(1)
@@ -83,6 +86,7 @@ typedef struct {
 ```
 
 ## android 範例
+
 ```java
     private fun readHistoryCommand(result: CHResult<CHEmpty>) {
         if (checkBle(result)) return

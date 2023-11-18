@@ -3,15 +3,17 @@
 ssm_touch 主動推送 Sesame 列表給手機。
 
 ## 循序圖
+
 <p align="left" >
   <img src="../src/pub_ssm_key/pub_ssm_key.png" alt="" title="">
 </p>
 
 ## ssm_touch 推送內容
-| Byte | N ~ 2   | 1         | 0    |
-|-------|:------:|:---------:|:----:|
-| Data  | payload | item_code | type |
-| 說明    | 送給手機的資料 | 指令編號      | 推送類型 |
+
+| Byte |  N ~ 2  |     1     |  0   |
+|------|:-------:|:---------:|:----:|
+| Data | payload | item_code | type |
+| 說明   | 送給手機的資料 |   指令編號    | 推送類型 |
 
 type : SSM2_OP_CODE_PUBLISH (0x08)
 
@@ -20,10 +22,10 @@ item code : SSM2_ITEM_CODE_INITIAL (102)
 payload : 詳見以下表格
 
 ### payload
-| Byte | 68          | 67 ~ 46   | 45          | 44 ~ 23   | 22          | 21 ~ 0    |
+
+| Byte |     68      |  67 ~ 46  |     45      |  44 ~ 23  |     22      |  21 ~ 0   |
 |:----:|:-----------:|:---------:|:-----------:|:---------:|:-----------:|:---------:|
 | Data | ssm2_status | ssm2_name | ssm1_status | ssm1_name | ssm0_status | ssm0_name |
-
 
 ### Sesame Status
 
