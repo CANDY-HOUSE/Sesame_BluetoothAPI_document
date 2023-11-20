@@ -18,9 +18,9 @@
 
 item code : SSM2_ITEM_CODE_HISTORY (4)
 
-is peek == true : 查看最新歷史，不刪除歷史
+is peek == true : 彈出一筆最舊的歷史，並刪除歷史
 
-is peek == false : 彈出一筆最舊的歷史，並刪除歷史
+is peek == false : 查看最新歷史，不刪除歷史
 
 ## ssm5 回傳內容
 
