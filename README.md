@@ -5,18 +5,15 @@
 
 - 注册 Sesame 设备（Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 Pro、 Sesame Touch 1 、WIFI Module2）
 - 锁定和解锁
-
 - 获取历史记录
 - 更新 SesameOS3
 - SesameOS3 设备的各种设置
 - 获取电池电量
+  
 ## Sesame智能门锁图示 
 ![Sesame device](https://raw.githubusercontent.com/CANDY-HOUSE/Sesame_BluetoothAPI_document/master/SesameOS3/candy_house_device.png "Sesame")
 
-
-- 本项目 SesameOs3 主要解决硬件设备 Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 ProCHBluetoothCenter 類別說明、 Sesame Touch 1 、WIFI Module2 等产品通过蓝牙连接。帮助用户通过 iOS 应用软件智能操作硬件。
-
-
+- 项目 SesameOs3 主要解决硬件设备 Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 ProCHBluetoothCenter 類別說明、 Sesame Touch 1 、WIFI Module2 等产品通过蓝牙连接。帮助用户通过 iOS 应用软件智能操作硬件。
 
 # 1. 项目依赖
 
