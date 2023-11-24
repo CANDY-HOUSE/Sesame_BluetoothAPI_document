@@ -10,7 +10,7 @@
 - 更新 SesameOS3
 - SesameOS3 设备的各种设置
 - 获取电池电量
-## Sesame Smart Device 
+## Sesame智能门锁图示 
 ![Sesame device](https://raw.githubusercontent.com/CANDY-HOUSE/Sesame_BluetoothAPI_document/master/SesameOS3/candy_house_device.png "Sesame")
 
 
