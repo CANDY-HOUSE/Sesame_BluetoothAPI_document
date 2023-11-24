@@ -1,6 +1,6 @@
 # Item: Finger Mode Set
 
-手機發送新增指令獲取ssm_touch現在處於新增或是驗證指紋模式，sesame5 回覆指令成功及模式。
+手機發送新增指令設定ssm_touch現在處於新增或是驗證指紋模式，sesame5 回覆指令成功及模式。
 
 ## 循序圖
 
