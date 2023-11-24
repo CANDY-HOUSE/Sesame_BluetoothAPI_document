@@ -1,4 +1,3 @@
-[toc]
 # Sesame概述
 - SesameSDK 是一个简单、强大且免费的蓝牙/物联网（物联网）库，适用于 Android 应用程序。Sesame 官方应用程序也是使用这个 SesameSDK 构建的，芝麻应用程序的所有功能都可以通过这个 SesameSDK 实现。SesameSDK 允许您：
 
