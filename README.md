@@ -1,6 +1,6 @@
-![Sesame device](https://raw.githubusercontent.com/CANDY-HOUSE/Sesame_BluetoothAPI_document/master/SesameOS3/candy_house_device.png "Sesame")
 
 # Sesame概述
+
 - SesameSDK 是一个简单、强大且免费的蓝牙/物联网（物联网）库，适用于 Android 应用程序。Sesame 官方应用程序也是使用这个 SesameSDK 构建的，芝麻应用程序的所有功能都可以通过这个 SesameSDK 实现。SesameSDK 允许您：
 
 - 注册 Sesame 设备（Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 Pro、 Sesame Touch 1 、WIFI Module2）
@@ -10,6 +10,9 @@
 - 更新 SesameOS3
 - SesameOS3 设备的各种设置
 - 获取电池电量
+## Sesame Smart Device 
+![Sesame device](https://raw.githubusercontent.com/CANDY-HOUSE/Sesame_BluetoothAPI_document/master/SesameOS3/candy_house_device.png "Sesame")
+
 
 - 本项目 SesameOs3 主要解决硬件设备 Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 ProCHBluetoothCenter 類別說明、 Sesame Touch 1 、WIFI Module2 等产品通过蓝牙连接。帮助用户通过 iOS 应用软件智能操作硬件。
 
