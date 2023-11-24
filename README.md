@@ -52,32 +52,8 @@ https://docs.qq.com/sheet/DTUFySklhdXdVeXRt?tab=BB08J2
 
 https://note.youdao.com/ynoteshare/index.html?id=8db706b82c4d0706ba7ba7e872233bdc&type=note&_time=1700573695538    
 
-# 7、APP框架/模组选用
 
-## 藍芽: CoreBluetooth
-
-https://developer.apple.com/documentation/corebluetooth
-
-## 本地存儲: CoreData
-
-https://developer.apple.com/documentation/coredata
-
-## Server 端: AWS SDK for iOS Swift Package Manager
-
-- 使用庫為 AWSMobileClientXCF
-  https://aws-amplify.github.io/aws-sdk-ios/docs/reference/AWSMobileClient/index.html
-
-## Siri & Short cut: Intents
-
-官方文檔 https://developer.apple.com/documentation/appintents
-參考文章 https://medium.com/simform-engineering/how-to-integrate-siri-shortcuts-and-design-custom-intents-tutorial-e53285b550cf
-
-
-## 手機通知
-
-https://developer.apple.com/documentation/usernotifications
-
-# 8、APP更多详细解读
+# 7、APP更多详细解读
 
 CHBluetoothCenter 類別說明
 此 APP 的 Core Data 本地儲存管理中心，以`shared` 建立單例，用來緩存數據以提高性能。將`CHDeviceKey` 存入 Core Data 前須轉換為 `CHDeviceMO`(MO = manage object)。 `CHDeviceMO` 即代表本地數據庫中的 Sesame 設備。
@@ -121,7 +97,7 @@ func lastCachedevices() -> [CHDeviceMO]
 func logout()
 //刪除所有` CHDeviceMO` 對象並清空緩存
 ```
-# 9 CHDevice 協議
+# 8 CHDevice 協議
 
 所有 Sesame 裝置都需要實現這些屬性和方法
 
@@ -202,3 +178,29 @@ public protocol CHSesameConnector {
 
 ## 重点数据结构
 https://github.com/CANDY-HOUSE/SesameSDK_iOS_with_DemoApp/tree/master/doc/重點數據結構
+
+
+# 9、APP框架/模组选用
+
+## 藍芽: CoreBluetooth
+
+https://developer.apple.com/documentation/corebluetooth
+
+## 本地存儲: CoreData
+
+https://developer.apple.com/documentation/coredata
+
+## Server 端: AWS SDK for iOS Swift Package Manager
+
+- 使用庫為 AWSMobileClientXCF
+  https://aws-amplify.github.io/aws-sdk-ios/docs/reference/AWSMobileClient/index.html
+
+## Siri & Short cut: Intents
+
+官方文檔 https://developer.apple.com/documentation/appintents
+參考文章 https://medium.com/simform-engineering/how-to-integrate-siri-shortcuts-and-design-custom-intents-tutorial-e53285b550cf
+
+
+## 手機通知
+
+https://developer.apple.com/documentation/usernotifications
