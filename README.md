@@ -1,0 +1,2 @@
+# Sesame_BluetoothAPI_document
+Sesame Bluetooth API 3.0は、オープンソース、使いやすく、強力、かつ永続的に無料です。公式のセサミアプリもこのBluetooth APIsを使用しており、このBluetooth APIsを用いてあなたのアプリにもセサミアプリが持つ全ての機能を組み込むことができます。
