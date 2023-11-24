@@ -11,6 +11,9 @@
 
 - 本项目 SesameOs3 主要解决硬件设备 Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 ProCHBluetoothCenter 類別說明、 Sesame Touch 1 、WIFI Module2 等产品通过蓝牙连接。帮助用户通过 iOS 应用软件智能操作硬件。
 
+![这是一张图片](https://raw.githubusercontent.com/CANDY-HOUSE/Sesame_BluetoothAPI_document/master/SesameOS3/candy_house_device.png "图片标题")
+
+
 # 1. 项目依赖
 
 - [Sesame 5] :该实例对象应用于 Sesame5 、Sesame5 Pro 产品
