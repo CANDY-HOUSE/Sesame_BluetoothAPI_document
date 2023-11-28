@@ -1,7 +1,7 @@
 
 # Sesame概述
 
-- SesameSDK 是一个简单、强大且免费的蓝牙/物联网（物联网）库，适用于 Android 应用程序。Sesame 官方应用程序也是使用这个 SesameSDK 构建的，芝麻应用程序的所有功能都可以通过这个 SesameSDK 实现。SesameSDK 允许您：
+- SesameSDK 是一个简单、强大且免费的蓝牙/物联网（物联网）库，适用于 iOS & Android 应用程序。Sesame 官方应用程序也是使用这个 SesameSDK 构建的，芝麻应用程序的所有功能都可以通过这个 SesameSDK 实现。SesameSDK 允许您：
 
 - 注册 Sesame 设备（Sesame 5、Sesame 5 Pro、Sesame Bike2、Sesame BLE Connector1、Sesame open sensor、Sesame Touch 1 Pro、 Sesame Touch 1 、WIFI Module2）
 - 锁定和解锁
@@ -42,16 +42,15 @@
 
 # 4、SesameBLE通讯加密层级
 
-https://note.youdao.com/s/SfTgIkYk
+[进入SesameBLE通讯加密层级](./SesameOS3/communicate.md)
 
 # 5、Sesame通讯控制指令
 
-https://docs.qq.com/sheet/DTUFySklhdXdVeXRt?tab=BB08J2    
+[进入Sesame通讯控制指令](./SesameOS3/sesame_ble_cmd.md)
 
 # 6、Sesame API 接口文档
 
-https://note.youdao.com/ynoteshare/index.html?id=8db706b82c4d0706ba7ba7e872233bdc&type=note&_time=1700573695538    
-
+[进入Sesame API 接口文档](./SesameOS3/sesame_api_service.md)
 
 # 7、APP更多详细解读
 
