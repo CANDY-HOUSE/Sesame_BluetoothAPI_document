@@ -1,16 +1,18 @@
 ## Sesame 全系列 BLE 可连接性
-<span style="color:white;background-color:orange;"> SesameOS 2 </span>
-<span style="color:white;background-color:#51B8A7;"> SesameOS 3 </span>
-<span style="color:green;float:">✔</span> Connectable
-<span style="color:red">✘</span> Non-connectable
-| <span  style="color: #999;">Switch / Connector </span> | <span style="color:orange">WiFi Module 2</span>| <span style="color:#51B8A7">Open Sensor 1<span> | <span style="color:#51B8A7">Sesame Touch 1</span> | <span style="color:#51B8A7">Sesame Touch 1 Pro</span> | <span style="color:#51B8A7">Remote</span> | <span style="color:#51B8A7">Remote Nano</span> | <span style="color:#51B8A7">Hub 3</span> | 
-| ----- |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| <span style="color:orange">Sesame 3</span> | <span style="color:green">✔</span> | <span style="color:red">✘</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">✘</span> | <span style="color:red">✘</span> |<span style="color:red">✘</span>|
-| <span style="color:orange">Sesame Bot 1</span> | <span style="color:green">✔</span> | <span style="color:red">✘</span> | <span style="color:green">✔</span> |<span style="color:green">✔</span> |<span style="color:red">✘</span> |<span style="color:red">✘</span> |<span style="color:red">✘</span>|
-| <span style="color:orange">Sesame Bike 1</span> | <span style="color:green">✔</span> | <span style="color:red">✘</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:red">✘</span> | <span style="color:red">✘</span> |<span style="color:red">✘</span>|
-| <span style="color:orange">Sesame 4</span> | <span style="color:green">✔</span> | <span style="color:red">✘</span> |<span style="color:green">✔</span> |<span style="color:green">✔</span> |<span style="color:red">✘</span> |<span style="color:red">✘</span> |<span style="color:red">✘</span>|
-| <span style="color:#51B8A7">Sesame Bike 2</span> | <span style="color:red">✘</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |<span style="color:green">✔</span>|
-| <span style="color:#51B8A7">Sesame 5</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |<span style="color:green">✔</span>|
-| <span style="color:#51B8A7">Sesame 5 Pro</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |<span style="color:green">✔</span>|
-| <span style="color:#51B8A7">Sesame 5 US</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |<span style="color:green">✔</span>|
-| <span style="color:#51B8A7">Sesame Bot 2</span> | <span style="color:red">✘</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | <span style="color:green">✔</span> |<span style="color:green">✔</span>|
+* 🟠 Device with SesameOS 2
+* 🔵 Device with SesameOS 3
+* ✅ Connectable
+* ❌ Non-connectable
+  
+| Switch / Connector     | WiFi Module 2 🟠 | Open Sensor 1 🔵 | Sesame Touch 1 🔵 | Sesame Touch 1 Pro 🔵 | Remote 🔵 | Remote Nano 🔵 | Hub 3 🔵 |
+| ------------------ |:-------------:|:-------------:|:--------------:|:------------------:|:------:|:-----------:|:-----:|
+| Sesame 3      🟠        | ✅            | ❌            | ✅            | ✅                  | ❌     | ❌          | ❌    |
+| Sesame Bot 1  🟠    | ✅            | ❌            | ✅            | ✅                  | ❌     | ❌          | ❌    |
+| Sesame Bike 1 🟠   | ✅            | ❌            | ✅            | ✅                  | ❌     | ❌          | ❌    |
+| Sesame 4      🔵        | ✅            | ❌            | ✅            | ✅                  | ❌     | ❌          | ❌    |
+| Sesame Bike 2 🔵   | ❌            | ✅            | ✅            | ✅                  | ✅     | ✅          | ✅    |
+| Sesame 5      🔵        | ✅            | ✅            | ✅            | ✅                  | ✅     | ✅          | ✅    |
+| Sesame 5 Pro  🔵    | ✅            | ✅            | ✅            | ✅                  | ✅     | ✅          | ✅    |
+| Sesame 5 US   🔵     | ✅            | ✅            | ✅            | ✅                  | ✅     | ✅          | ✅    |
+| Sesame Bot 2  🔵    | ❌            | ✅            | ✅            | ✅                  | ✅     | ✅          | ✅    |
+
