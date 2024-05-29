@@ -1,0 +1,4 @@
+@startuml
+APP -> bot2: SSM2_ITEM_SETTING_SCRIPT (95)
+bot2 --> APP: Success, 腳本名字及內容
+@enduml
