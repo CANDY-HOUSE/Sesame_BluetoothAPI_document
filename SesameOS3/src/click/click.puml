@@ -1,0 +1,4 @@
+@startuml
+APP -> bot2: SSM2_ITEM_CODE_CLICK (89), 歷史標籤
+bot2 --> APP: Success
+@enduml

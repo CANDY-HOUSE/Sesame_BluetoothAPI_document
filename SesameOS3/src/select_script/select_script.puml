@@ -1,0 +1,4 @@
+@startuml
+APP -> bot2: SSM2_ITEM_SETTING_SCRIPT (93), 腳本編號
+bot2 --> APP: Success
+@enduml
