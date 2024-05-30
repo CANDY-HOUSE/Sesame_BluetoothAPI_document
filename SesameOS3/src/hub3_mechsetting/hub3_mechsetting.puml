@@ -1,0 +1,3 @@
+@startuml
+hub3 -> APP: SSM2_ITEM_CODE_MECH_SETTING(80), mach_setting
+@enduml

@@ -1,0 +1,3 @@
+@startuml
+hub3 -> APP: SSM2_ITEM_CODE_MECH_STATUS(81), mach_status
+@enduml
