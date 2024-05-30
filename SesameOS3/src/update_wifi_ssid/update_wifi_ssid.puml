@@ -1,0 +1,3 @@
+@startuml
+hub3 -> APP: HUB3_UPDATE_WIFI_SSID(136), wifi_ssid
+@enduml
