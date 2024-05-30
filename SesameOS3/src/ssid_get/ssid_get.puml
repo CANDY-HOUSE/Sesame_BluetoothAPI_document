@@ -1,0 +1,4 @@
+@startuml
+APP -> hub3: HUB3_ITEM_CODE_WIFI_SSID(131)
+hub3 --> APP: Success
+@enduml
