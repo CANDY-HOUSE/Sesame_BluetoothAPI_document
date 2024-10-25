@@ -42,7 +42,7 @@ typedef struct {
 | 自动上锁|    11    | 1-2【秒数】 |
 | megnet  |    17    | none |
 | mechSetting   |    80    | 1-5【autolock+开关锁角度】 |
-| mechStatus   |    81    | none |
+| mechStatus   |    81    | none | No response
 | lock   |    82    | 1-7【历史标签】 |
 | unlock   |    83    | 1-7【历史标签】 |
 | ops door open   |    90    | none |
