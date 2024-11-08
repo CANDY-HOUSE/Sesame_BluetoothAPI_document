@@ -34,3 +34,12 @@ Sesame5 服務 UUID : 0xFD81
 |  8   |   Open Sensor    |
 |  9   | Sesame Touch Pro |
 |  10  |   Sesame Touch   |
+|  11  |   BLE Connector  |
+|  12  |   APAMAN Locker  |
+|  13  |   Hub 3          |
+|  14  |   Remote         |
+|  15  |   Remote Nano    |
+|  16  |   Sesame 5 US    |
+|  17  |   Sesame Bot 2   |
+|  18  | Sesame Face Pro  |
+|  18  |   Sesame Face    |
