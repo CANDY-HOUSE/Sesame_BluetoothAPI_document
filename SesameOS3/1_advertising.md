@@ -41,5 +41,5 @@ Sesame5 服務 UUID : 0xFD81
 |  15  |   Remote Nano    |
 |  16  |   Sesame 5 US    |
 |  17  |   Sesame Bot 2   |
-|  18  | Sesame Face Pro  |
-|  19  |   Sesame Face    |
+|  18  |   F2             |
+|  19  |   F1             |
