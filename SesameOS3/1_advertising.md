@@ -42,4 +42,4 @@ Sesame5 服務 UUID : 0xFD81
 |  16  |   Sesame 5 US    |
 |  17  |   Sesame Bot 2   |
 |  18  | Sesame Face Pro  |
-|  18  |   Sesame Face    |
+|  19  |   Sesame Face    |
