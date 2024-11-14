@@ -43,3 +43,5 @@ Sesame5 服務 UUID : 0xFD81
 |  17  |   Sesame Bot 2   |
 |  18  |   F2             |
 |  19  |   F1             |
+|  20  |Bluetooth半導体光リレー|
+
