@@ -1,4 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_CARD_DELETE(108), Card ID}
-SesameTouch --> APP: 命令成功
-@enduml

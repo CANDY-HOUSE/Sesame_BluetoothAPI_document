@@ -1,4 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_CARD_GET(109)}
-SesameTouch --> APP: 命令成功
-@enduml

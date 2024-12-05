@@ -1,4 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_PASSCODE_GET(125)}
-SesameTouch --> APP: 命令成功
-@enduml

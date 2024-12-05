@@ -1,3 +1,0 @@
-@startuml
-SesameTouch -> APP: SSM_OS3_PASSCODE_FIRST(128)
-@enduml

@@ -1,4 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_FINGERPRINT_MODE_GET(121), card_mode}
-SesameTouch --> APP: {命令成功, card_mode}
-@enduml

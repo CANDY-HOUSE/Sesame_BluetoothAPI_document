@@ -1,4 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_PASSCODE_DELETE(124), ID}
-SesameTouch --> APP: 命令成功
-@enduml

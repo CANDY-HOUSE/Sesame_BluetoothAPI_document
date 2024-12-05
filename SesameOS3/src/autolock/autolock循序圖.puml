@@ -1,4 +1,0 @@
-@startuml
-APP -> Sesame5: {SSM2_ITEM_CODE_TIME(11), autolock秒數}
-Sesame5 --> APP: 命令成功
-@enduml

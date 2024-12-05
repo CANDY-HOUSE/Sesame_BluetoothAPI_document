@@ -1,5 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_CARD_CHANGE(107), Card ID, Card Name}
-SesameTouch --> APP: 命令成功
-SesameTouch -> APP: {Card ID, Card Name}
-@enduml
