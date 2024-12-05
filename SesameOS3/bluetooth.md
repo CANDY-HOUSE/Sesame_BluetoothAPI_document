@@ -153,7 +153,16 @@ order: 0
 
 ### 傳輸協議 Request, Response and Publish
 
-![Sesame](https://raw.githubusercontent.com/CANDY-HOUSE/.github/main/profile/uml/uml_output/request_response_publish.png)
+```mermaid
+sequenceDiagram
+    participant Central as iOS/Android/ESP32<br/>BLE Central app
+    participant Peripheral as Sesame<br/>BLE Peripheral
+    
+    Central->>Peripheral: Request<br/>(基於 BLE Write without response 實作)
+    Peripheral-->>Central: Response<br/>(基於 BLE Notify 實作)
+    Peripheral->>Peripheral: Process
+    Peripheral-->>Central: Publish<br/>(基於 BLE Notify 實作)
+```
 
 - 受到 RESTful API 增刪查改數據庫 POST 方法的啟發, 我們基於 `BLE write without response` 封裝了 1 命令方法：<br><span style="background-color: #fdea8e;color:#000000">・Request</span>
 - 受到 RESTful API async/sync 的啟發, 我們基於`BLE notify`封裝成 2 個收 Callback 方法：<br><span style="background-color: #fdea8e;color:#000000">・Response</span><br><span style="background-color: #fdea8e;color:#000000">・Publish</span>
