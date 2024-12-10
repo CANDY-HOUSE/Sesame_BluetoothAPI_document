@@ -1,4 +1,0 @@
-@startuml
-APP -> Sesame5: 連線、開啟 notify
-Sesame5 -> APP: 4bytes random code
-@enduml

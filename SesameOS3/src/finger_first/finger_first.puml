@@ -1,3 +1,0 @@
-@startuml
-SesameTouch -> APP: SSM_OS3_FINGERPRINT_FIRST(120)
-@enduml

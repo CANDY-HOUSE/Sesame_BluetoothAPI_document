@@ -1,4 +1,0 @@
-@startuml
-OpenSensor -> Sesame5: SSM2_ITEM_DOOR_OPEN (90)
-Sesame5 --> OpenSensor: Success
-@enduml

@@ -1,5 +1,0 @@
-@startuml
-APP -> SesameTouch: {SSM_OS3_FINGERPRINT_CHANGE(115), id, name}
-SesameTouch --> APP: {命令成功}
-SesameTouch -> APP: {Finger ID, Finger Name}
-@enduml

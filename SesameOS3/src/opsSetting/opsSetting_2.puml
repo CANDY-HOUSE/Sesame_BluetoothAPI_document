@@ -1,3 +1,0 @@
-@startuml
-Sesame5 -> APP: ops_lock_second
-@enduml

@@ -1,4 +1,0 @@
-@startuml
-APP -> Sesame5: SSM3_ITEM_RESET(104)
-Sesame5 --> APP: Success
-@enduml

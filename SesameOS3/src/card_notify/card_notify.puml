@@ -1,3 +1,0 @@
-@startuml
-SesameTouch -> APP: {CardID, CardName}
-@enduml
