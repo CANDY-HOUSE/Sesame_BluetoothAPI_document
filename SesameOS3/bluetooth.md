@@ -19,10 +19,70 @@ order: 0
 
 ## 藍牙廣播（BLE Advertising）
 
-<a href="https://docs.google.com/drawings/d/1ntw26Zpr8aQMhy19h0SP__Wemjn_1UFzR4I--jwEfSg/"><p align="left" >
-<img src="https://raw.githubusercontent.com/CANDY-HOUSE/.github/main/profile/images/BLEadvertisingSesameOS3.svg" alt="BLEadvertisingSesameOS3" title="BLE advertising of SesameOS3">
+```mermaid
+block-beta
+  columns 10
+  title1["Flags Data"]:3 title2["Manufacturer Data"]:7
+  1 2 3 4 5 6 7 8 9 10
+  
+  loc1["2"] loc2["0x01"] loc3["0x06"] loc4["22"] loc5["0xFF"] loc6["0x5A"] loc7["0x05"] loc8["0x05"] loc9["0x00"] loc10["0x00"]
+  
+  ins1["长度"] ins2["类型:Flags\n Data"] ins3["此设备是BLE only,\n处于General \nDiscoverable Mode"] ins4["长度"] ins5["类型:Manufacturer\n Data"] ins6_7["Company ID:0x055A\n(代表CANDY HOUSE Inc.)"]:2 ins8_9["设备类型(厂家私有)"]:2 ins10["设备状态(厂家私有)"]
 
-</p></a>
+classDef titledef1 fill:#E7E882
+class title1 titledef1
+classDef titledef2 fill:#38F5ED
+class title2 titledef2
+
+classDef privatedef fill: #f9fb0c
+class loc8,loc9,loc10 privatedef
+```
+```mermaid
+block-beta
+  columns 10
+  title2["Manufacturer Data"]:10
+  11 12 13 14 15 16 17 18 19 20
+  
+  loc1["0x01"] loc2["0x02"] loc3["0x03"] loc4["0x04"] loc5["0x05"] loc6["0x06"] loc7["0x07"] loc8["0x08"] loc9["0x09"] loc10["0x0A"]
+  
+  ins1["\n设备UUID(共16个Bytes)\n"]:10
+  
+classDef titledef2 fill:#38F5ED
+class title2 titledef2
+
+classDef privatedef fill: #f9fb0c
+class loc1,loc2,loc3,loc4,loc5,loc6,loc7,loc8,loc9,loc10 privatedef
+```
+```mermaid
+block-beta
+  columns 10
+  title2["Manufacturer Data (Continued)"]:6 title3["Service UUID"]:4
+  21 22 23 24 25 26 27 28 29 30
+  
+  loc1["0x11"] loc2["0x12"] loc3["0x13"] loc4["0x14"] loc5["0x15"] loc6["0x16"] loc7["3"] loc8["0x03"] loc9["0x81"] loc10["0xFD"]
+  
+  ins1_6["设备UUID(共16个Bytes)(续)"]:6 ins7["长度"] ins8["数据类型\n(0x03表示\nBLE Service UUID)"] ins9_10["BLE Service UUID\n(0xFD81代表\nSesame Service)"]:2
+  
+  
+classDef titledef1 fill:#E7E882
+class title3 titledef1
+classDef titledef2 fill:#38F5ED
+class title2 titledef2  
+
+classDef privatedef fill: #f9fb0c
+class loc1,loc2,loc3,loc4,loc5,loc6 privatedef
+```
+
+> 第一行：属于蓝牙规范，还是厂家定义
+>
+> 第二行：序号
+>
+> 第三行：十六进制值
+>
+> 第四行：内容描述
+
+
+
 
 - Bluetooth LE 4.0 advertising 長度最長為 31 Bytes.
 - <span style="background-color: #fdea8e;color:#000000">黃底</span>或<span style="background-color: #e4dc7f;color:#000000">黃底</span>標記表示 CANDY HOUSE 定義的協議。<br>
@@ -142,10 +202,109 @@ order: 0
 
 ### 藍牙數據透傳(BLE Data Transmission)
 
-<a href="https://docs.google.com/presentation/d/1TwGJjAWVgVVkeVxlmVibuQFGrb2XYEdaUk1yMW0V6h4/edit#slide=id.g38d4ff6190_0_158"><p align="left" >
-<img src="https://raw.githubusercontent.com/CANDY-HOUSE/.github/main/profile/uml/uml_output/communication_layer.png" alt="BLEcommunication4Layers.jpg" title="4 layers of BLE communication">
+```mermaid
+block-beta
 
-</p></a>
+columns 5
+
+space:4
+block:upper_right:1
+	columns 1
+    ur1["ciphertext"] 
+    ur2["plaintext"]
+end
+
+
+T1["Application Layer"]:1
+block:ID:2
+	columns 1
+	block
+		A [" Item Code "] 
+		B ["Parameter"]
+	end
+    G ["Application PDU"]
+end
+space:2
+style T1 fill:#0,stroke-width:0px
+
+
+T2["Security Layer"]:1
+T21	["Encrypted Application PDU
+    (AES加密后,密文与明文长度相同)"]:2
+T22	["Mic
+    (Message Integrity Code)"]:1
+space:1
+
+
+T3["Transport Layer"]:1
+block:Content3:4
+	columns 1
+	block:updonw
+        columns 4
+        block:ID31
+            A311 ["SEG0"]
+            B312 ["Segment0"]
+        end
+        block:ID32
+            A321 ["SEG1"]
+            B322 ["Segment1"]
+        end
+        temp ("......")
+        block:ID3n
+            A32n ["SEGn"]
+            B32n ["Segmentn"]
+        end        
+        
+    end
+	text3["Segment_0+Segment_1+...+Segment_n = Encrypted Application PDU + MIC"]
+end
+
+T4["Bearer"]:1
+%%Content4 ["GATT"]:4
+block:total_transfer:4
+    columns 1
+	Content4 ["GATT"]
+    total4["总共要传输的资料 = Segment_0+Segment_1+...+Segment_n = n x MTU"] 
+end
+
+classDef ciphertextDef fill:#f20000
+class ur1,T21 ciphertextDef
+
+classDef commentDef fill:#e8e8e8
+class total4,text3 commentDef
+
+classDef tDef fill:#cbcbdb
+class T1,T2,T3,T4 tDef
+```
+**单个SEG的定义:**
+
+```mermaid
+block-beta
+  columns 2
+  SEG["SEG"]:2
+  i00["bit7 - bit1"] i01["bit0"]
+  i10["parsing_type"] i11["is_start"]
+  
+    classDef titleDef fill:#55acaf
+    class SEG titleDef
+```
+```mermaid
+block-beta
+  columns 3
+  space i01["is_start==1"] i02["is_start==0"]
+  i10["parsing_type!=0"] i11["A single segment content.
+  是头也是尾(明文or密文)"]	i12["End of content
+  尾(明文or密文)"]
+  i20["parsing_type==0"] i21["Start of content.头"] i22["Middle of content.中"]
+  
+    classDef titleDef fill:#faea9a
+    class i01,i02 titleDef
+    
+    classDef rowDef fill:#e3db8b
+    class i10,i20 rowDef
+```
+
+
 
 - 受到 TCP/IP 模型的啟發, 我們將藍芽通信分成 4 層。
 - `明文的任意格式之信息` 經過 `加密`、`切割`後 `透過藍芽GATT收發`。4 個狀態分別稱 <u>Application Layer</u>, <u>Security Layer</u>, <u>Transport Layer</u>, <u>Gatt Bearer Layer</u>.
@@ -1053,7 +1212,53 @@ SS->>App: 同步 Sesame狀態<br/>(是否鎖上?, 電池, 角度)
 
 #### 2.AWS IoT Shadow
 
-![Sesame](https://raw.githubusercontent.com/CANDY-HOUSE/.github/main/profile/uml/uml_output/P02_AWS_IoT_Shadow.png)
+```mermaid
+block-beta
+  columns 4
+  
+  i01["Sesame2 
+  shadow"] space:2 i02["WiFiModule2 
+  shadow"] 
+  
+  %%i10["i10"] i11["i11"] i12["i12"] i13["i13"]
+  space:4
+  space:4
+  
+  i20["phone"] i21["phone"] space i23["WiFiModule2"]
+  space:4
+  space:4
+  space space i32["Sesame2"] space
+  
+  i21--"1.WiFi Password"-->i23
+  
+  i21-->i32 i32-->i21
+  i23--"4.Lock/Unlock"-->i32 i32-->i23
+  
+  i01--"Get Sesame2 status
+  by Subscription"-->i20
+  
+  i21--"Publish 
+  Sesame2 status"-->i01
+  
+  i23--"Publish Sesame2 status"-->i01
+  
+  i21--"2.Publish the 
+  Sesame2 List 
+  and Sesame keys 
+  to the shadow"-->i02
+  
+  i02--"3. Get the 
+  Sesame2 List 
+  by Subscription"-->i23
+  
+  commentcloud>"表示运行在AWS IoT中"]
+
+    classDef cloudDef fill:#f9cb9c
+    class i01,i02,commentcloud cloudDef
+```
+
+
+
 
 #### 3.註冊 WiFiModule2
 
